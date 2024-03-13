@@ -1,0 +1,278 @@
+
+  
+ol,ul{
+    list-style:none;
+   
+}
+a{
+    text-decoration: none;
+   
+}
+i{
+    color: violet;
+}
+li{
+    margin-right: 20px; 
+}
+
+.seccion {
+    overflow: hidden; /* Esto permite que los elementos flotantes dentro de .seccion sean contenidos */
+}
+.seccion-1 .acerca-de{
+    float:left;
+    
+margin-left: 20%;
+    background-color: grey;
+    width: 30%;
+   
+ 
+}
+
+.seccion-1 .acerca-imagen{
+    float: right; /* Flota la imagen a la derecha */
+    width: 30%; /* Ajusta el ancho de la imagen según tu preferencia */
+    height: 0;
+    margin-right: 20%;
+}
+
+
+#encabezado{
+    display: flex;
+    background-color: red;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#encabezado nav  ul{
+    display: flex;
+    gap: 1.1em;
+    padding: 8px;
+    justify-content: space-between;
+}
+body{
+    background-color: black;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.trabajo {
+    display: inline-block;
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+.imagent{
+    width:100%;
+}
+/*MENU */
+#check{
+    display:none;
+}
+.checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+footer{
+    background-color:grey;
+}
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+ #encabezado{
+    background-color: blue;
+ }
+.seccion-1 .acerca-de{
+ width: 100%;
+ float: none;
+ margin-left: 0;
+ font-size: 10px;
+
+ }
+.seccion-1 .acerca-imagen {
+        width: 100%; /* La imagen ocupa todo el ancho en pantallas más pequeñas */
+        height: 100%;
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-top: 0px; /* Agrega margen superior para separar del texto */
+     }
+.checkbtn{
+        display: block;
+    }
+
+    
+    #encabezado ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:aquamarine;
+        text-align: center;
+    
+        top: 74px;
+        left: 100%;
+        transition: all  0.5s;
+    }
+    
+    #check:checked ~ ul{
+        left: 0;
+        display: block;
+    
+    }
+    
+    #encabezado nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #encabezado nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ .checkbtn{
+        color: blueviolet;
+    }
+   
+}
+
+/* ------------- Encabezado Contacto ------------- */
+  
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-header {
+    text-align: center;
+    background-color: green;
+    border: 1px solid white ;
+    border-radius: 3px;
+  
+    width: 80%;
+    margin: 10px auto;
+    padding: 50px;
+  }
+  
+  .form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* ------------- Formulario ------------- */
+  
+  .formulario {
+    background-color: gold    ;
+    border: 1px solid red;
+    border-radius: 3px;
+  
+    width: 80%;
+    padding: 50px;
+    margin: 30px 0 40px 0;
+    
+  }
+  /* ------------- Campos del Formulario ------------- */
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row input[type="text"], .form-row input[type="email"]{
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+  
+  
+  .form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+  }
+  .form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+  
+  
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+  
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  
+  
+    width: 100%;
+  }
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+  
+    color: black;
+    background-color: #5995da;
+  
+  
+    border: none;
+    border-radius: 3px;
+  
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+  
+  
+  .form-row button:active {
+    background-color: #407fc7;
+  }
+  /* ------------- Para Pantallas de más de 700px ------------- */
+@media only screen and (min-width: 700px) {
+    .form-header {
+      padding: 50px;
+    }
+  
+    .form-row {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .form-row input[type="text"] {
+      width: 250px;
+      height: initial;
+    }
+    .form-row label {
+      text-align: right;
+      width: 120px;
+      margin-top: 7px;
+      padding-right: 20px;
+    }
+    .form-row textarea {
+        width: 250px;
+      }
+      .form-row button {
+        margin-left: 120px;
+  }
+}
